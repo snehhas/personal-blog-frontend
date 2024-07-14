@@ -1,22 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './components/Auth/Login';
-import Signup from './components/Auth/Signup';
-import Logout from './components/Auth/Logout';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
 
-const App = () => {
-    return (
-        <Router>
-            <div>
-                <h1>My Portfolio</h1>
-                <Routes>
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/signup" element={<Signup />} />
-                    <Route path="/logout" element={<Logout />} />
-                </Routes>
-            </div>
-        </Router>
-    );
-};
+function App() {
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
+  );
+}
 
 export default App;

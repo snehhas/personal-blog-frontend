@@ -1,0 +1,4 @@
+.custom-carousel img {
+    height: 300px; /* Adjust the height as needed */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+}
